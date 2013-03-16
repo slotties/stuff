@@ -1,0 +1,19 @@
+body {
+	font-family: arial;
+	font-size: 12px;
+}
+
+h3 {
+	background-color: #5f89cc;
+	color: #f2f2f2;
+	padding: 4px 8px 4px 8px;
+}
+
+a {
+	color: #1a45ff;
+	text-decoration: none;
+}
+
+li a:first-child {
+	margin-right: 8px;
+}
