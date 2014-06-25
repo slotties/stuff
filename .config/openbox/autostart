@@ -1,0 +1,13 @@
+gnome-settings-daemon &
+# Launch Xcomppmgr and tint2 with openbox
+if which tint2 >/dev/null 2>&1; then
+  (sleep 2 && xcompmgr) &
+  (sleep 2 && tint2) &
+fi
+
+plank &
+feh --bg-fill /home/kuro/Pictures/Wallpapers/1371549282_10.jpg &
+
+xscreensaver &
+
+urxvtd -f
