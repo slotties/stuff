@@ -115,7 +115,7 @@ alias mvnnt="mvn -Dmaven.test.skip=true"
 alias mvnc="mvn clean"
 alias mvninst="mvnnt && /bin/cp -v target/*[^source].jar $TOMCAT_HOME/pblib"
 
-alias cdsvn="cd /home/kuro/work/pirobase"
+alias cdws="cd /home/kuro/ws/head/pirobase"
 
 # set global aliases
 alias -g L="| less"
@@ -170,11 +170,11 @@ case $TERM in
 		export TERM=xterm
         ;;
 esac
-# bindkey "^[[A" up-line-or-search
-# bindkey "^[[B" down-line-or-search
+bindkey "^[[A" up-line-or-search
+bindkey "^[[B" down-line-or-search
 
-# bindkey "^[[0A" up-line-or-search
-# bindkey "^[[0B" down-line-or-search
+bindkey "^[[0A" up-line-or-search
+bindkey "^[[0B" down-line-or-search
 
 bindkey "${terminfo[kcuu1]}" up-line-or-search
 bindkey "${terminfo[kcud1]}" down-line-or-search

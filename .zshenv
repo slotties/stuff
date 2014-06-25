@@ -9,29 +9,23 @@
 ZDOTDIR=~/.zsh
 
 # java
-export J17_HOME=/opt/java/java_17
-export JAVA_HOME=/opt/java/current
+export J17_HOME=/usr/java/jdk1.7.0_51/
+export JAVA_HOME=$J17_HOME
 
 # maven
-export M2_HOME=/opt/maven/m2
+export M2_HOME=/opt/apache-maven-3.1.1/
 export MAVEN_OPTS="-Xmx256m"
 
 # servers
-export TOMCAT_HOME=/home/kuro/work/tomcat
+export TOMCAT_HOME=/home/kuro/ws/head/tomcat
 
-# GO
-export GOBIN=/home/kuro/go/bin
-export GOROOT=/home/kuro/go
-export GOOS=linux
-
-export PATH=$JAVA_HOME/bin:$GOBIN:$PATH
+export PATH=$JAVA_HOME/bin:$PATH
 
 # set generic path and manpath
-path=($GOBIN
-      $M2_HOME/bin
+path=($M2_HOME/bin
       $JAVA_HOME/bin
-      $MAVEN_HOME/bin
-      $GOBIN
+	/home/kuro/bin
+	/home/kuro/ws/scripts
       /sbin
       /bin
       /usr/sbin
