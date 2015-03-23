@@ -4,6 +4,7 @@
 # functions, options, key bindings, etc.
 #
 
+fpath=(~/.zsh/completion $fpath) 
 autoload -U compinit
 compinit
 
