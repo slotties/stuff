@@ -8,13 +8,16 @@
 # the directory to search for shell startup files
 ZDOTDIR=~/.zsh
 
+export GOHOME=/usr/local/go
+
 # java
-export J17_HOME=/usr/java/jdk1.7.0_51/
+export J17_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/
+export J18_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/
 export JAVA_HOME=$J17_HOME
 
 # maven
-export M2_HOME=/opt/apache-maven-3.1.1/
-export MAVEN_OPTS="-Xmx256m"
+export M2_HOME=~/tools/apache-maven-3.2.5/
+export MAVEN_OPTS="-Xmx512m"
 
 # servers
 export TOMCAT_HOME=/home/kuro/ws/head/tomcat
@@ -24,8 +27,8 @@ export PATH=$JAVA_HOME/bin:$PATH
 # set generic path and manpath
 path=($M2_HOME/bin
       $JAVA_HOME/bin
-	/home/kuro/bin
-	/home/kuro/ws/scripts
+	$GOHOME/bin
+	~/tools/scripts
       /sbin
       /bin
       /usr/sbin
@@ -33,6 +36,7 @@ path=($M2_HOME/bin
       /usr/local/sbin
       /usr/local/bin
       /usr/X11R6/bin
+	/usr/local/mysql/bin/
       )
 manpath=($HOME/usr/man $manpath)
 
@@ -40,7 +44,7 @@ manpath=($HOME/usr/man $manpath)
 #cdpath=(~)
 
 # where to look for autoloaded function definitions
-#fpath=($fpath $HOME/.zsh/.zfunc)
+fpath=($fpath ~/.zsh/completion)
 
 # remove duplicate entries from path, cdpath, manpath and
 # fpath and export (export is equivalent to typeset -gx)

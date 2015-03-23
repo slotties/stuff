@@ -4,10 +4,16 @@
 NC=$'%{\e[0m%}'
 (( $EUID == 0 )) && UC=$'%{\e[1;31m%}' || UC=$'%{\e[1;32m%}'
 
-UC=$'%{\e[1;32m%}'
+# Cool symbols:
+# ⚛ ☃ ★ ☘ ☠ ☢ ☣ ☯ ☺ ⚘ 
+# Colors:
+# green: 32
+# blue: 94
+# red: 91
+UC=$'%{\e[1;94m%}'
 #PS1="${UC}[${NC}%n@%m${UC}:${NC}%${LENGTH}<..<%B%~%b${UC}]%#${NC} "
-PS1="${UC}[${NC}%n${UC}:${NC}%${LENGTH}<..<%B%~%b${UC}]%#${NC} "
-PS2="%_${UC}>${NC} "
+#PS1="${UC}[${NC}%n${UC}:${NC}%${LENGTH}<..<%B%~%b${UC}]%#${NC} "
+PS1="${UC}${NC}%n${UC}:${NC}%${LENGTH}<..<%B%~%b${UC} ⚡${NC} "
 PS2="%_${UC}>${NC} "
 PS3="?# "
 PS4="+%N:%i${UC}>${NC} "
@@ -61,7 +67,8 @@ export EDITOR VISUAL FCEDIT
 # set pager and options for less
 PAGER="less -s"
 #PAGER="most -s"
-LESS="-iMW"
+# LESS="-iMW"
+LESS="eFRX"
 export PAGER LESS
 
 # set BLOCKSIZE
@@ -142,7 +149,7 @@ alias -g DZ="/dev/zero"
 alias -g DR="/dev/random"
 
 # redefine or delete useless aliases for linux
-alias ls="ls -F --color"
+#alias ls="ls -F --color"
 
 # set key bindings
 bindkey -e
